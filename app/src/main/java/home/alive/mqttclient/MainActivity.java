@@ -93,11 +93,11 @@ public class MainActivity extends AppCompatActivity implements MqttCallback {
             t.schedule(timerTaskObj, 0, 5000);//set timer here
             final Button connect_btn=(Button) findViewById(R.id.connect);
             connect_btn.setEnabled(false);
+            client_id.setFocusable(false);
         } catch (MqttException e) {
             Toast.makeText(MainActivity.this, "Cant connect to server", Toast.LENGTH_SHORT).show();
             e.printStackTrace();
         }
-        client_id.setFocusable(false);
 
     }
 
